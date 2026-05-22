@@ -13,7 +13,7 @@
         }
 
         body {
-            background-color: #f9f9f9;
+            background-color: #f4f6f4;
             color: #333;
             line-height: 1.6;
             padding-bottom: 40px;
@@ -45,8 +45,8 @@
         }
 
         h2 {
-            color: #d32f2f;
-            font-size: 1.8rem;
+            color: #2e7d32;
+            font-size: 2rem;
             margin-bottom: 5px;
         }
 
@@ -58,21 +58,46 @@
         }
 
         .description {
-            line-height: 1.6;
-            color: #333;
-            margin-bottom: 25px;
             font-size: 1.05rem;
+            color: #444;
+            margin-bottom: 25px;
+        }
+
+        /* Features & Product Layout */
+        .product-section {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .features-box {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .product-bottle-box {
+            width: 200px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .product-bottle-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
         }
 
         h3 {
             color: #333;
             margin-bottom: 10px;
-            border-bottom: 2px solid #ffc107;
+            border-bottom: 2px solid #2e7d32;
             padding-bottom: 5px;
         }
 
         .features-list {
-            margin: 15px 0 25px 0;
+            margin: 15px 0;
             list-style: none;
         }
 
@@ -85,27 +110,37 @@
 
         .features-list li::before {
             content: "✓";
-            color: #d32f2f;
+            color: #2e7d32;
             font-weight: bold;
             margin-right: 12px;
             font-size: 1.2rem;
         }
 
+        /* Middle Ad Banner */
+        .middle-banner {
+            width: 100%;
+            margin: 25px 0;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
         /* Contact Box */
         .contact-box {
-            background-color: #fff3cd;
-            padding: 20px;
-            border-left: 5px solid #ffc107;
+            background-color: #e8f5e9;
+            padding: 25px;
+            border-left: 5px solid #2e7d32;
             font-size: 1.1rem;
             border-radius: 4px;
             margin-top: 25px;
+            text-align: center;
         }
 
         /* Action Buttons */
         .cta-buttons {
             display: flex;
             gap: 15px;
-            margin-top: 25px;
+            margin-top: 20px;
             flex-wrap: wrap;
         }
 
@@ -131,24 +166,24 @@
         }
 
         .btn-call {
-            background-color: #d32f2f;
+            background-color: #2e7d32;
             color: white;
         }
 
         .btn-call:hover {
-            background-color: #b71c1c;
+            background-color: #1b5e20;
         }
     </style>
 </head>
 <body>
 
     <div class="banner-container">
-        <img class="banner-img" src="https://raw.githubusercontent.com/4seasonspts-commits/pest-control-project/main/banner2.jpg" alt="Eliminator 25 EC Fipronil Banner">
+        <img class="banner-img" src="https://raw.githubusercontent.com/4seasonspts-commits/pest-control-project/main/Eliminator%20picture.jpg" alt="Eliminator 25 EC Termite Proofing Chemical">
     </div>
 
     <div class="content-container">
         <h2>Eliminator 25 EC - Premium Fipronil Termiticide</h2>
-        <p class="subtitle">Advanced Termite Control & Protection</p>
+        <p class="subtitle">Advanced Termite Control & Post-Construction Proofing</p>
         
         <p class="description">
             <strong>Eliminator 25 EC</strong> is a high-performance liquid termiticide formulated with 
@@ -156,15 +191,26 @@
             eliminates subterranean termites through the "transfer effect," ensuring total colony eradication.
         </p>
 
-        <h3>Key Features:</h3>
-        <ul class="features-list">
-            <li><strong>Fipronil Power:</strong> Highly effective non-repellent technology.</li>
-            <li><strong>Dual Action:</strong> Ideal for pre-construction foundation treatment and post-construction termite proofing.</li>
-            <li><strong>Long Residual Life:</strong> Delivers durable, multi-year structural defense for homes and buildings.</li>
-        </ul>
+        <div class="product-section">
+            <div class="features-box">
+                <h3>Key Features:</h3>
+                <ul class="features-list">
+                    <li><strong>Fipronil Power:</strong> Highly effective non-repellent technology.</li>
+                    <li><strong>Dual Action:</strong> Ideal for pre-construction foundation treatment and post-construction termite proofing.</li>
+                    <li><strong>Long Residual Life:</strong> Delivers durable, multi-year structural defense for homes and buildings.</li>
+                </ul>
+            </div>
+            <div class="product-bottle-box">
+                <img class="product-bottle-img" src="https://raw.githubusercontent.com/4seasonspts-commits/pest-control-project/main/Eliminator%2025%20EC%20picture%20%20Clean%20%20-%20Copy.jpg" alt="Eliminator 25 EC Bottle">
+            </div>
+        </div>
+
+        <div class="middle-banner">
+            <img class="banner-img" src="https://raw.githubusercontent.com/4seasonspts-commits/pest-control-project/main/Eliminator%2025%20EC%20picture%20.jpg" alt="Advanced Termite Proofing Solution Before After">
+        </div>
 
         <div class="contact-box">
-            <strong>Contact for Orders & Professional Services:</strong>
+            <strong>Contact 4Seasons Pest & Termite Solutions for Orders & Professional Services:</strong>
             <div class="cta-buttons">
                 <a href="https://wa.me/923008259455" class="btn btn-whatsapp" target="_blank">Message on WhatsApp</a>
                 <a href="tel:+923008259455" class="btn btn-call">Call: 03008259455</a>
