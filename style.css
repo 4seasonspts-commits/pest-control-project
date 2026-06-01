@@ -1,124 +1,95 @@
+/* Poore page ki basic setting */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
 
-/* All-in-One Hero Banner - Merged Version */
+/* Banner Hero Section (Main Container) */
 .banner-hero {
     position: relative;
     width: 100%;
-    max-width: 1200px;
-    height: 500px;
-    margin: 40px auto;
-    border-radius: 20px;
+    min-height: 80vh; /* Screen ki 80% height lega */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
     overflow: hidden;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* Background Image ko handle karne ke liye */
 .banner-image-wrapper {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 1;
 }
 
 .banner-image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.6s ease;
-    animation: kenBurns 25s ease-in-out infinite alternate;
+    object-fit: cover; /* Image perfectly fit hogi */
+    filter: brightness(50%); /* Text ko wazeh dikhane ke liye image thodi dark hogi */
 }
 
-/* Glassmorphism overlay */
-.banner-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, 
-        rgba(31, 38, 135, 0.4) 0%, 
-        rgba(231, 60, 126, 0.3) 100%);
-    backdrop-filter: blur(2px);
-    z-index: 1;
-}
-
-/* Content styling */
+/* Text aur Button ka container */
 .banner-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    width: 90%;
-    z-index: 2;
+    position: relative;
+    z-index: 2; /* Yeh text ko image ke upar rakhega */
     padding: 20px;
+    max-width: 600px;
 }
 
 .banner-content h1 {
-    font-size: 3.2rem;
-    font-weight: 700;
-    margin-bottom: 16px;
-    text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.4);
-    line-height: 1.2;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
 .banner-content p {
-    font-size: 1.25rem;
-    margin-bottom: 32px;
-    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.5);
-    opacity: 0.95;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
-.btn-cta {
-    padding: 16px 40px;
-    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+/* Clickable Call Button Design */
+.call-btn {
+    display: inline-block;
+    background-color: #25d366; /* Green color (WhatsApp/Call vibe) */
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px; /* Rounded button */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s, background-color 0.2s;
 }
 
-.btn-cta:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+/* Button par hover (ungli) rakhne se effect */
+.call-btn:hover {
+    background-color: #128c7e;
+    transform: scale(1.05); /* Button thoda sa bada hoga */
 }
 
-.btn-cta:active {
-    transform: translateY(-1px);
+.call-btn span {
+    margin-right: 8px;
 }
 
-/* Hover effect on full banner */
-.banner-hero:hover .banner-image-wrapper img {
-    transform: scale(1.05);
-}
-
-/* Ken Burns animation */
-@keyframes kenBurns {
-    from { transform: scale(1); }
-    to { transform: scale(1.12); }
-}
-
-/* Responsive */
+/* Mobile responsive settings */
 @media (max-width: 768px) {
-    .banner-hero { 
-        height: 400px; 
-        margin: 20px 15px;
-        border-radius: 16px;
+    .banner-content h1 {
+        font-size: 1.8rem;
     }
-    .banner-content h1 { font-size: 2.2rem; }
-    .banner-content p { font-size: 1.05rem; margin-bottom: 24px; }
-    .btn-cta { padding: 14px 32px; font-size: 1rem; }
-}
-
-@media (max-width: 480px) {
-    .banner-hero { height: 350px; }
-    .banner-content h1 { font-size: 1.8rem; }
-    .banner-content p { font-size: 1rem; }
+    .banner-content p {
+        font-size: 1rem;
+    }
+    .call-btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
 }
